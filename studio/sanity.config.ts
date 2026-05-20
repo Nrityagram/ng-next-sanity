@@ -16,6 +16,7 @@ import {
   type DocumentLocation,
 } from 'sanity/presentation'
 import {assist} from '@sanity/assist'
+import {Logo} from './src/components/Logo'
 
 // Environment variables for project configuration
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID || 'your-projectID'
@@ -48,6 +49,7 @@ function resolveHref(documentType?: string, slug?: string): string | undefined {
 export default defineConfig({
   name: 'default',
   title: 'Nrityagram Studio',
+  icon: Logo, // Custom logo for the Sanity Studio, imported from ./src/components/Logo.tsx
 
   projectId,
   dataset,
